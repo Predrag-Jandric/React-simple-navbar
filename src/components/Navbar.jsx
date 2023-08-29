@@ -12,19 +12,19 @@ function Navbar() {
     }
 
     return (
-        <nav>
+        <nav id='anchor'>
             <img className='logo' src={logo} alt="logo" />
 
             <section className={`section-nav ${isMobileActive ? 'active' : ''}`}>
                 <ul>
                     <li>
-                        <a href="#">Lorem</a>
+                        <a href="#anchor">Lorem</a>
                     </li>
                     <li>
-                        <a href="#">Ipsum</a>
+                        <a href="#anchor">Ipsum</a>
                     </li>
                     <li>
-                        <a href="#">Dollor</a>
+                        <a href="#anchor">Dollor</a>
                     </li>
                 </ul>
             </section>

@@ -5,35 +5,44 @@ import { AiOutlineClose } from "react-icons/ai"
 
 function Navbar() {
 
-    const [isMobileActive, setIsMobileActive] = React.useState(false)
+    const [isMobileActive, setIsMobileActive] = React.useState(true)
+
+    const handleClick = () => {
+        setIsMobileActive(prevState => !prevState)
+    }
 
     return (
-        <nav className='flex items-center justify-between bg-slate-200 py-5 px-10 shadow-lg'>
+        <nav>
             <a href="#">L</a>
 
 
-            <section>
-                <ul className='flex items-center justify-center gap-10'>
-                    <li className='list-none py-3 px-6 bg-slate-300'>
-                        <a className='no-underline hover:text-red-500' href="#">link1</a>
+            {/* max-[768px]:hidden */}
+            <section className='section-nav'>
+                {/* ul has id navbar */}
+                <ul>
+                    <li>
+                        <a href="#">link1as</a>
                     </li>
-                    <li className='list-none py-3 px-6 bg-slate-300'>
-                        <a className='no-underline hover:text-red-500' href="#">link1</a>
+                    <li>
+                        <a href="#">link2adasdas</a>
+                    </li>
+                    <li>
+                        <a href="#">link3</a>
                     </li>
                 </ul>
             </section>
 
             {/* mobile */}
-            <section>
-
+            <section onClick={handleClick} className='section-mobile'>
                 {isMobileActive ?
-                    <GiHamburgerMenu className='text-3xl hover:bg-red-400 hover:cursor-pointer' />
-                    : <AiOutlineClose className='text-3xl hover:bg-red-400 hover:cursor-pointer' />
+                    <GiHamburgerMenu className='icon' />
+                    : <AiOutlineClose className='icon' />
                 }
-
             </section>
         </nav>
     )
 }
 
 export default Navbar
+
+

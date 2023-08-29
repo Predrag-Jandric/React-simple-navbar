@@ -1,7 +1,7 @@
 import React from 'react'
 import { GiHamburgerMenu } from "react-icons/gi"
 import { AiOutlineClose } from "react-icons/ai"
-
+import logo from '../logo.svg'
 
 function Navbar() {
 
@@ -13,21 +13,18 @@ function Navbar() {
 
     return (
         <nav>
-            <a href="#">L</a>
+            <img className='logo' src={logo} alt="logo" />
 
-
-            {/* max-[768px]:hidden */}
-            <section className='section-nav'>
-                {/* ul has id navbar */}
+            <section className={`section-nav ${isMobileActive ? 'active' : ''}`}>
                 <ul>
                     <li>
-                        <a href="#">link1as</a>
+                        <a href="#">Lorem</a>
                     </li>
                     <li>
-                        <a href="#">link2adasdas</a>
+                        <a href="#">Ipsum</a>
                     </li>
                     <li>
-                        <a href="#">link3</a>
+                        <a href="#">Dollor</a>
                     </li>
                 </ul>
             </section>
